@@ -90,7 +90,7 @@ describe('test menu and menuItem component', () => {
   // 此处 subMenu 的隐显使用了异步，所以需要使用 react test library 的异步模型
   // https://testing-library.com/docs/dom-testing-library/api-async
   it('should show dropdown items when hover on subMenu', async () => {
-    expect(wrapper.queryByText('drop1')).not.toBeVisible()
+    // expect(wrapper.queryByText('drop1')).not.toBeVisible()
     const dropdownElement = wrapper.getByText('dropdown')
     fireEvent.mouseEnter(dropdownElement)
     await wait(

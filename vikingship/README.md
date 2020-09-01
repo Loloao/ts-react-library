@@ -38,6 +38,11 @@
 ## css
 
 - scss 文件以`_`开头表示是一个 partial 文件，只能被导入，而不能被单独编译
+- SVG 作为 Icon 图的优势
+  - 完全可控
+  - SVG 即取即用，Font Icon 要下载全部字体文件
+  - Font Icon 还有很多奇怪的 Bug，比如在浏览器没有下载完字体文件的时会渲染成各种各样的字符
+  - react-fontawesome
 
 ### 技巧
 

@@ -1,8 +1,14 @@
 import React, { ReactElement } from 'react'
-import Button, { ButtonType, ButtonSize } from './components/Button/button'
+import Button, { ButtonSize } from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
+// 引入 icon svg 字体
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+// 此处是引入所有图标，也可单个图标引入
+library.add(fas)
 
 function App(): ReactElement {
   return (
@@ -17,13 +23,13 @@ function App(): ReactElement {
           <MenuItem>dropdown3</MenuItem>
         </SubMenu>
       </Menu>
-      <Button size={ButtonSize.Large} btnType={ButtonType.Link}>
+      <Button size={'lg'} btnType={'link'}>
         hello
       </Button>
-      <Button size={ButtonSize.Small} btnType={ButtonType.Default}>
+      <Button size={'sm'} btnType={'default'}>
         hello
       </Button>
-      <Button size={ButtonSize.Large} btnType={ButtonType.Primary}>
+      <Button size={'lg'} btnType={'primary'}>
         hello
       </Button>
     </div>
