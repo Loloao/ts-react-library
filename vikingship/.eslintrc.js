@@ -34,14 +34,20 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'prettier/prettier': 1,
-    'no-console': ['warn', {
-      allow: ['warn', 'error']
-    }],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     eqeqeq: ['warn', 'always'],
-    'prefer-const': ['error', {
-      destructuring: 'all',
-      ignoreReadBeforeAssign: true
-    }],
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'all',
+        ignoreReadBeforeAssign: true,
+      },
+    ],
     // '@typescript-eslint/indent': ['error', 2, {
     //   VariableDeclarator: 4,
     //   SwitchCase: 1
@@ -52,16 +58,22 @@ module.exports = {
     '@typescript-eslint/no-triple-slash-reference': 0,
     '@typescript-eslint/ban-ts-ignore': 0,
     '@typescript-eslint/no-this-alias': 0,
-    '@typescript-eslint/triple-slash-reference': ['error', {
-      path: 'always',
-      types: 'never',
-      lib: 'never'
-    }],
+    '@typescript-eslint/triple-slash-reference': [
+      'error',
+      {
+        path: 'always',
+        types: 'never',
+        lib: 'never',
+      },
+    ],
     // React相关校验规则
     'react/jsx-indent': [2, 2],
-    'react/jsx-no-undef': [2, {
-      allowGlobals: true
-    }],
+    'react/jsx-no-undef': [
+      2,
+      {
+        allowGlobals: true,
+      },
+    ],
     'jsx-control-statements/jsx-use-if-tag': 0,
   },
 }

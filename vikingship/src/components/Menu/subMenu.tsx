@@ -4,7 +4,6 @@ import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
 import Icon from '../Icon/icon'
 import Transition from '../Transition/transition'
-import { CSSTransition } from 'react-transition-group'
 
 export interface SubMenuProps {
   index?: string

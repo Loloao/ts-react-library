@@ -1,16 +1,29 @@
-import React, { ReactElement } from 'react'
-import Button, { ButtonSize } from './components/Button/button'
+import React, { ReactElement, , { useEffect, useState } } from 'react'
+import Button from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
+import Input from './components/Input/input'
+import AutoComplete from './components/AutoComplete/autoComplete'
 // 引入 icon svg 字体
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import { useState, useEffect } from 'react'
 
 // 此处是引入所有图标，也可单个图标引入
 library.add(fas)
 
 function App(): ReactElement {
+  const [title, setTitle] = useState('')
+  const postData = {
+    title: 'my title',
+    body: 'hello man'
+  }
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.com/posts/1', postData).then(resp => {
+      setTitle(resp.data.title)
+    })
+  })
   return (
     <div className="App">
       <Menu>
@@ -32,6 +45,8 @@ function App(): ReactElement {
       <Button size={'lg'} btnType={'primary'}>
         hello
       </Button>
+      <Input prepend="http://" append=".com" />
+      <AutoComplete />
     </div>
   )
 }

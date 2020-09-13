@@ -1,4 +1,4 @@
-import React, { useState, createContext, ReactElement } from 'react'
+import React, { useState, createContext } from 'react'
 import classNames from 'classnames'
 import { MenuItemProps } from './menuItem'
 

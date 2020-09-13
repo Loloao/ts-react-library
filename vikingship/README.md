@@ -44,6 +44,14 @@
   - Font Icon 还有很多奇怪的 Bug，比如在浏览器没有下载完字体文件的时会渲染成各种各样的字符
   - react-fontawesome
 
+### 其他知识点
+
+- `Fetch`缺点
+  - 只对网络请求报错，对 400，500 都当做成功请求
+  - 默认不带 cookie
+  - 不支持 abort，不支持超时控制
+  - 没有办法原生检测请求的进度
+
 ### 技巧
 
 - 可以用`useRef`来判断组件是否是首次挂载而不是更新
@@ -58,3 +66,13 @@ useEffect(() => {
   }
 })
 ```
+
+- 使用[storyBook](https://storybook.js.org)来进行组件的展示和文档编写
+
+  - `storybook-addon-info`进行文档的编写
+  - `react-docgen`进行文档的自动生成，它需要`react-docgen-typescript-loader`设置在 webpack 中
+
+- 使用`json-placeholder`
+
+- `Omit`可以忽略类型中的一个属性值
+- `Upload`一个文件的生命周期，`开始`-`beforeUpload(file)`-`onProgress(event, file)`-`onChange(file)`-`onError or onSuccess`-`onRemoved(file)（删除已上传文件）`
